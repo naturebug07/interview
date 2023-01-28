@@ -1,2 +1,8 @@
 <h1 id="h1Tag">HI</h1>
-<button>Click me</button>
+<button id="changeColor">Click me</button>
+<script>
+  document.getElementById("changeColor").onclick = function()
+  {
+    document.getElementById("changeColor").style.color = 'green';
+  }
+</script>
