@@ -36,7 +36,7 @@ let sum=0;
 
 for (let i in response){
   console.log(response[i])
-  if (objArray[i]["count"]==parseInt(response[i]["count"])){
+  if (response[i]["count"]==parseInt(response[i]["count"])){
     sum =sum+response[i]["count"]
   }
 }
