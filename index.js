@@ -32,15 +32,15 @@ const response = {
   keys: ['maran', 'gas', 'prelude'],
 };
 
-let sum=0;
-
-for (let i in response){
-  console.log(response[i])
-  if (response[i]["count"]==parseInt(response[i]["count"])){
-    sum =sum+response[i]["count"]
-  }
+let totalCount = 0;
+const calSum =(val)=>{
+  totalCount +=val
 }
-console.log('the sum of count is :' + ' ' +sum);
+for(let item in response){
+  'count' in response[item] && calSum(response[item].count)
+}
+console.log("the count is "+totalCount)
+
 // 3rd assignment
 // change the 'HI' Text color on clicking of button.
 document.getElementById("changeColor").onclick = function()
